@@ -1,0 +1,4 @@
+PermitRootLogin yes
+PubkeyAuthentication no
+PasswordAuthentication yes
+PermitEmptyPasswords yes
