@@ -1,4 +1,13 @@
-image:
-	docker build -t cirocosta/dind .
+IMAGE := cirocosta/dind
 
-.PHONY: image
+test:
+	true
+
+image:
+	docker build -t $(IMAGE) .
+
+push-image:
+	docker push $(IMAGE)
+
+
+.PHONY: image push-image test

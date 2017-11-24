@@ -2,9 +2,7 @@ FROM docker:dind
 
 RUN set -x \
   && apk update \
-  && apk add openssh git
-
-RUN set -x \
+  && apk add openssh git \
   && ssh-keygen -A \
   && mv /usr/local/bin/docker /usr/bin/docker \
   && git config --system user.email "git@example.com" \
